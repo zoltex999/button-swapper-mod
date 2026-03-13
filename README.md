@@ -3,13 +3,12 @@
       <img src="logo.png" alt="Logo" width="120" height="120">
    </a>
    <h1 align="center">Nothing Mod</h1>
-   <p align="center" style="font-size: 5em; margin-bottom: 5em; font-weight: bold;">
+   <p align="center" id="main-text" style="font-size: 36px !important; margin-bottom: 200px !important; font-weight: bold !important; color: #ff0000 !important;">
       a useless mod that adds nothing to the game
    </p>
-   <div style="font-size: 0.7em; max-width: 700px; margin: 0 auto; text-align: left; line-height: 1.4;">
+   <div id="rest-text" style="font-size: 10px !important; max-width: 500px !important; margin: 0 auto !important; text-align: left !important; line-height: 1.2 !important; opacity: 0.7 !important;">
       <p>
          but is nothing possible with accurate hitboxes ?
-         
          No, nothing is not possible with accurate hitboxes. In fact, accurate hitboxes are one of the fundamental elements that make interaction systems in games, simulations, and physics-based environments reliable and meaningful. A hitbox is the invisible geometric boundary used by a program to determine whether two objects interact or collide. When these boundaries closely match the visible shape or intended interaction area of an object, the system becomes predictable and consistent. Because of this, accurate hitboxes enable many things rather than preventing them.
 
 First, accurate hitboxes make gameplay interactions fair and understandable. When a player sees an object on the screen and attempts to interact with it, the expected outcome depends on the assumption that the object's collision boundary corresponds to its visual representation. If the hitbox is inaccurate—for example, much larger or smaller than the visible object—the player may experience unexpected collisions or missed interactions. Accurate hitboxes prevent this confusion by ensuring that what the player sees corresponds closely to what the game engine calculates. This alignment improves usability and trust in the game's mechanics.
@@ -28,8 +27,26 @@ Finally, accurate hitboxes also improve accessibility and player learning. When 
 
 For all these reasons, the answer to the question "Is nothing possible with accurate hitboxes?" is clearly no. Accurate hitboxes do not prevent possibilities; they create the conditions that allow precise, reliable, and understandable interactions to exist. They make gameplay fairer, physics more stable, development easier, and player experiences more consistent. Rather than limiting what can be done, accurate hitboxes expand the range of mechanics and designs that developers can confidently implement.
       </p>
-      <p style="text-align: right; font-style: italic; margin-top: 2em;">
+      <p style="text-align: right !important; font-style: italic !important; margin-top: 20px !important;">
          *text by ItsMeChatGpt*
       </p>
    </div>
 </div>
+
+<style>
+#main-text {
+    font-size: 36px !important;
+    margin-bottom: 200px !important;
+    font-weight: bold !important;
+    color: #ff0000 !important;
+}
+
+#rest-text {
+    font-size: 10px !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    text-align: left !important;
+    line-height: 1.2 !important;
+    opacity: 0.7 !important;
+}
+</style>
