@@ -6,7 +6,7 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "gdzoltex.nothing.mod",
+	"id": "gdzoltex.nothingmod",
 	"name": "Nothing",
 	"version": "v1.0.0",
 	"developer": "GDzoltex",
@@ -17,9 +17,6 @@
 	"links": {
 		"source": "https://github.com/zoltex999/nothing-mod",
 		"community": "https://discord.gg/D9TCNr3VzE"
-	},
-	"resources": {
-		"sprites": [ "resources/button-image.png" ]
 	},
 	"tags": ["content", "enhancement", "joke", "interface"],
 	"early-load": true
