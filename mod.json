@@ -6,18 +6,19 @@
 		"mac": "2.2081",
 		"ios": "2.2081"
 	},
-	"id": "gdzoltex.nothingmod",
-	"name": "Nothing",
+	"id": "gdzoltex.button-swapper",
+	"name": "Button Swapper",
 	"version": "v1.0.0",
 	"developer": "GDzoltex",
-	"description": "Add nothing to the game",
+	"description": "Swap the play and editor buttons",
 	"dependencies": {
 		"geode.node-ids": ">=v1.20.0"
 	},
+	"tags": ["content", "enhancement", "interface"],
+	"early-load": true,
 	"links": {
-		"source": "https://github.com/zoltex999/nothing-mod",
+		"source": "https://github.com/zoltex999",
 		"community": "https://discord.gg/D9TCNr3VzE"
-	},
-	"tags": ["content", "enhancement", "joke", "interface"],
-	"early-load": true
+
+	}
 }
