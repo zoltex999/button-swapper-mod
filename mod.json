@@ -10,14 +10,14 @@
 	"name": "Button Swapper",
 	"version": "v1.0.0",
 	"developer": "GDzoltex",
-	"description": "Swap the play and editor buttons",
+	"description": "Swap the play and the editor buttons",
 	"dependencies": {
 		"geode.node-ids": ">=v1.20.0"
 	},
 	"tags": ["content", "enhancement", "interface"],
 	"early-load": true,
 	"links": {
-		"source": "https://github.com/zoltex999",
+		"source": "https://github.com/zoltex999/button-swapper-mod",
 		"community": "https://discord.gg/D9TCNr3VzE"
 
 	}
