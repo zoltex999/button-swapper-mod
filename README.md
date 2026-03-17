@@ -1,6 +1,6 @@
 <div align="center">
    <a href="https://github.com/button-swapper-mod">
-      <img src="logo.png" alt="Logo" width="120" height="120">
+      <img src="logo.pn" alt="Logo" width="120" height="120">
    </a>
    <h1 align="center">Button Swapper Mod</h1>
    <p align="center" id="main-text" style="font-size: 36px !important; margin-bottom: 200px !important; font-weight: bold !important; color: #ff0000 !important;">
