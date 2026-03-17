@@ -1,39 +1,46 @@
 #include <Geode/Geode.hpp>
 #include <Geode/modify/MenuLayer.hpp>
-#include <string_view>
-#include <unordered_set>
-#include <vector>
 
 using namespace geode::prelude;
 
 class $modify(MenuLayerSwap, MenuLayer) {
-    bool init() {
-        if (!MenuLayer::init()) return false;
-
-        auto menu = this->getChildByID("main-menu");
-        if (!menu) return true;
-
-        auto play = typeinfo_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("play-button"));
-        auto editor = typeinfo_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("editor-button"));
-
-        auto garage = typeinfo_cast<CCMenuItemSpriteExtra*>(menu->getChildByID("garage-button"));
-
-        if (play && editor) {
-            auto pPos = play->getPosition();
-            auto ePos = editor->getPosition();
-
-            play->setPosition(ePos);
-            editor->setPosition(pPos);
-            play->setScale(0.65f);
-            editor->setScale(1.45f);
-        } else {
-            log::error("error while swapping buttons  >:(");
+    void applyButtonLayout() {
+        auto* mainMenu = this->getChildByID("main-menu");
+        if (!mainMenu) {
+            return;
         }
 
-        if (garage) {
-            garage->setScale(0.65f);
+        auto* playButton = typeinfo_cast<CCMenuItemSpriteExtra*>(mainMenu->getChildByID("play-button"));
+        auto* editorButton = typeinfo_cast<CCMenuItemSpriteExtra*>(mainMenu->getChildByID("editor-button"));
+        auto* garageButton = typeinfo_cast<CCMenuItemSpriteExtra*>(mainMenu->getChildByID("garage-button"));
+
+        if (playButton && editorButton) {
+            const auto playPosition = playButton->getPosition();
+            const auto editorPosition = editorButton->getPosition();
+
+            playButton->setPosition(editorPosition);
+            editorButton->setPosition(playPosition);
+            playButton->setScale(0.65f);
+            editorButton->setScale(1.45f);
+        } else {
+            log::warn("swapping play and editor buttons failed >:(");
+        }
+
+        if (garageButton) {
+            garageButton->setScale(0.65f);
+        }
+    }
+
+    bool init() {
+        if (!MenuLayer::init()) {
+            return false;
         }
 
         return true;
+    }
+
+    void onEnter() {
+        MenuLayer::onEnter();
+        this->applyButtonLayout();
     }
 };
